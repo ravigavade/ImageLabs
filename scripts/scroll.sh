@@ -24,3 +24,7 @@ echo "=== NON-EXPLICIT GC COUNT ==="
 adb logcat -d | grep "csaim.imagelabs" | grep "GC freed" | grep -vc "Explicit"
 echo "=== MEMORY (end of run) ==="
 adb shell dumpsys meminfo $PKG | grep -E "TOTAL PSS|Java Heap:|Native Heap:|Graphics:"
+
+echo "=== CRASHED? ==="
+adb logcat -d | grep -c "FATAL EXCEPTION"
+adb shell pidof $PKG > /dev/null && echo "app alive" || echo "app DEAD"

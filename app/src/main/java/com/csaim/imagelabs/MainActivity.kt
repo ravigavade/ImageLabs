@@ -65,13 +65,14 @@ fun ImageList(
             .fillMaxSize()
     ) {
         items(urls, key = {it}){ url ->
-            Image(
-                painter = painterResource(R.drawable.ic_launcher_background),
-                contentDescription = null,
-                modifier = Modifier
-                    .padding(8.dp)
-                    .aspectRatio(1f)
-            )
+//            Image(
+//                painter = painterResource(R.drawable.ic_launcher_background),
+//                contentDescription = null,
+//                modifier = Modifier
+//                    .padding(8.dp)
+//                    .aspectRatio(1f)
+//            )
+            NaiveImageCell(url)
         }
     }
 }
