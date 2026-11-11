@@ -28,3 +28,6 @@ adb shell dumpsys meminfo $PKG | grep -E "TOTAL PSS|Java Heap:|Native Heap:|Grap
 echo "=== CRASHED? ==="
 adb logcat -d | grep -c "FATAL EXCEPTION"
 adb shell pidof $PKG > /dev/null && echo "app alive" || echo "app DEAD"
+
+echo "=== CACHE (last line) ==="
+adb logcat -d -s BitmapCache | tail -1
