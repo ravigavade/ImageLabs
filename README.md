@@ -12,8 +12,8 @@ the numbers are comparable.
 | Stage | Strategy | Status |
 |-------|----------|--------|
 | 0 | Setup and measuring tools | Done |
-| 1 | Naive: full-size decode, no cache | Todo |
-| 2 | Manual downsampling | Todo |
+| 1 | Naive: full-size decode, no cache | Done |
+| 2 | Manual downsampling | Done |
 | 3 | In-memory `LruCache` | Todo |
 | 4 | Disk cache | Todo |
 | 5 | Glide | Todo |

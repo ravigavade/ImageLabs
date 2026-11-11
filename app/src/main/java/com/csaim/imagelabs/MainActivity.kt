@@ -72,7 +72,8 @@ fun ImageList(
 //                    .padding(8.dp)
 //                    .aspectRatio(1f)
 //            )
-            NaiveImageCell(url)
+//            NaiveImageCell(url)
+            DownsampledImageCell(url)
         }
     }
 }
