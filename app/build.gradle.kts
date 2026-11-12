@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
+//    kapt("com.github.bumptech.glide:compiler:4.16.0")
 }
 
 android {
@@ -51,4 +52,8 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     debugImplementation(libs.androidx.compose.ui.tooling)
+//    implementation("com.github.bumptech.glide:glide:5.0.9")
+//    implementation ("com.github.bumptech.glide:glide:4.16.0")
+    implementation(libs.glide)
+    implementation(libs.glide.compose)
 }

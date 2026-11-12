@@ -77,7 +77,8 @@ fun ImageList(
 //            )
 //            NaiveImageCell(url)
 //            DownsampledImageCell(url)
-            CachedImageCell(url)
+//            CachedImageCell(url)
+            GlideImageCell(url)
         }
     }
 }
