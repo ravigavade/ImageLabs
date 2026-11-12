@@ -1,6 +1,9 @@
 #!/bin/bash
 PKG=com.csaim.imagelabs
 
+if [ "$1" = "cold" ]; then
+  adb shell pm clear $PKG
+fi
 # fresh start: kill app, relaunch, let it settle
 adb shell am force-stop $PKG
 adb shell am start -n $PKG/.MainActivity > /dev/null
@@ -31,3 +34,6 @@ adb shell pidof $PKG > /dev/null && echo "app alive" || echo "app DEAD"
 
 echo "=== CACHE (last line) ==="
 adb logcat -d -s BitmapCache | tail -1
+
+echo "=== DISK CACHE (last line) ==="
+adb logcat -d -s DiskCache | tail -1

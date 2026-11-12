@@ -23,6 +23,7 @@ object BitmapCache {
     fun get(url: String): Bitmap? {
         val bitmap = cache.get(url)
         if (bitmap != null) hits++ else misses++
+        android.util.Log.d("BitmapCache", "hits=$hits misses=$misses")
         return bitmap
     }
 

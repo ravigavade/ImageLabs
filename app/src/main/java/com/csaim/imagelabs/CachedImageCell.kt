@@ -32,7 +32,9 @@ fun CachedImageCell(url: String) {
                 value = cached
             } else {
                 // 2. miss: load like Stage 2, then store it
-                val loaded = loadBitmapDownsampled(url, boxSize.width, boxSize.height)
+
+//                val loaded = loadBitmapDownsampled(url, boxSize.width, boxSize.height)
+                val loaded = loadBitmapWithDisk(url, boxSize.width, boxSize.height)
                 if (loaded != null) {
                     BitmapCache.put(url, loaded)
                 }
